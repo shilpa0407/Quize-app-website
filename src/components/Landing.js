@@ -37,8 +37,9 @@ function Landing(){
         };
       }, [setSpringProps]);
     return(
-    
+  
         <div>
+            <Parallax pages={5}>
         <animated.div className="cursor" style={{
             transform: springProps.xy.interpolate((x, y) => `translate3d(${x - 10}px, ${y - 10}px, 0)`),
           }}> </animated.div>
@@ -56,7 +57,7 @@ function Landing(){
            </div>
 
 {/* landing page main text and images */}
-  
+  <ParallaxLayer>
   <div className="main-text-img">
 
     <div className="main-text">
@@ -76,7 +77,7 @@ function Landing(){
     </div> 
     <div className="img-div"><img className="small-img" src={landingpic} alt="pic"></img></div>
     </div>
-
+    </ParallaxLayer>
 {/* 2nd page how to play starts from here */}
 
 <div className="section-2">
@@ -114,7 +115,7 @@ function Landing(){
  </div>
 </div>
 </div>
-        
+</Parallax>
         </div>
     )
 }
