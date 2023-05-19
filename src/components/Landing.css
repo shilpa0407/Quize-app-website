@@ -57,7 +57,16 @@
 
 .main-text-img {
     display: flex;
+    animation: fade-out 2s ease-in forwards; 
 }
+@keyframes fade-out
+ {
+    from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }}
 
 .main-text {
     flex: 30%;
@@ -185,6 +194,7 @@
     .main-text-img {
         display: flex;
         margin-top: 10px;
+        animation: scaleUp  3s  ease-in left;
     }
     
     .text1-bold {
@@ -247,6 +257,7 @@
         font-size: 25px;
         font-weight: 800;
     }
+
     .img-div img {
         width: 280px;
         height: auto;
@@ -385,33 +396,138 @@
     border: 1px solid #1D4645;
     color: #1D4645;
     background-color: rgba(255, 255, 255, 0.712);
+    
 }
 
 .section-5{
-    background-color: #F5F5F5;
     padding-left: 150px;
+    padding-right: 150px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 .gallary-1{
     display: flex;
-    flex-wrap: wrap;
+   
 }
+
 .gal-1{
-    flex: 1;
+    display: flex;
+    flex: 2;
     background-color: #1D4645;
+    margin-right: 5px;
+    
 }
+.gal-1-text{
+    flex: 2.5;
+    background-color: #1D4645;
+ padding-left: 20px;
+}
+
+.gal-1-text h4{
+    font-family: 'Commissioner';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    color: #FFFFFF;
+    margin-top: 150px;
+}
+.gal-1-text p{
+    font-family: 'Rubik';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 25px;
+color: #D2D2D2;
+}
+
+.gal-1-img1{
+    flex: 1;
+    width: 250px;
+    text-align: center;
+    padding-right: 5px;
+    padding-top: 5px;
+}
+
+
+
 .gal-2{
     flex: 1;
+    background-color: #FFF2E6;
+    text-align: center;
 }
+.gal-2 p{
+    padding-top: 50px;
+ font-family: 'Commissioner';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+color: #1D4645;
+
+}
+
+.gal-1-img2{
+    width: 150px;
+    padding-top: 20px;
+}
+.gal-2-1{
+    display: flex;
+    padding-top: 5px;
+    overflow: hidden;
+text-align: center;
+}
+
 .gal-3{
     flex: 1;
+    width: 200px;
+    background-color: #1D4645;
+    margin-right: 5px;
 }
+
+.gal-3 p{
+    padding-top: 50px;
+    font-family: 'Commissioner';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 40px;
+   color: #fff;
+}
+
 .gal-4{
+    background-color: #FFF2E6;
     flex: 1;
+    margin-right: 5px;
 }
+.gal-4 p{
+    padding-top: 50px;
+    font-family: 'Commissioner';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 40px;
+   color:#1D4645;
+}
+
 .gal-5{
+    background-color: #1D4645;
     flex: 1;
 }
-.gal-6{
-    flex: 1;
+
+.gal-5 p{
+    padding-top: 50px;
+    font-family: 'Commissioner';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 40px;
+   color: #fff;
+}
+
+.gal-1-img3,  .gal-1-img5{
+    padding-top: 80px;
+    width: 150px;
+    height:auto;
+}
+.gal-1-img4{
+    width: 150px;
+    height:auto; 
+    padding-top: 92px;
 }

@@ -10,14 +10,17 @@ import card4 from "../Images/card4.png"
 import card5 from "../Images/card5.png"
 import card6 from "../Images/card6.png"
 import { useSpring, animated } from 'react-spring';
-import { Parallax, ParallaxLayer } from '@react-spring/parallax'
-
+import bscmodeltest from "../Images/bscmodeltest.png";
+import primaryexam from "../Images/primaryexam.png";
+import bankexam from "../Images/bankexam.png"
+import nsiexam from "../Images/nsiexam.png"
+import railwayexam from "../Images/railwayexam.png"
 
 
 function Landing(){
     const [springProps, setSpringProps] = useSpring(() => ({
         xy: [0, 0],
-        config: { mass: 1, tension: 100, friction: 14 },
+        config: { mass: 10, tension: 1200, friction: 40 },
       }));
     
       const handleMouseMove = (e) => {
@@ -39,7 +42,7 @@ function Landing(){
     return(
   
         <div>
-            <Parallax pages={5}>
+            
         <animated.div className="cursor" style={{
             transform: springProps.xy.interpolate((x, y) => `translate3d(${x - 10}px, ${y - 10}px, 0)`),
           }}> </animated.div>
@@ -57,7 +60,6 @@ function Landing(){
            </div>
 
 {/* landing page main text and images */}
-  <ParallaxLayer>
   <div className="main-text-img">
 
     <div className="main-text">
@@ -77,7 +79,7 @@ function Landing(){
     </div> 
     <div className="img-div"><img className="small-img" src={landingpic} alt="pic"></img></div>
     </div>
-    </ParallaxLayer>
+    
 {/* 2nd page how to play starts from here */}
 
 <div className="section-2">
@@ -105,17 +107,24 @@ function Landing(){
     <div className='water'>
  <div className="section-5">
     <div className="gallary-1">
-        <div className="gal-1">1</div>
-        <div className="gal-2">1</div>
-        <div className="gal-3">1</div>
-        <div className="gal-4">1</div>
-        <div className="gal-5">1</div>
-        <div className="gal-6">1</div>
+        <div className="gal-1">
+          <div className='gal-1-text'>
+            <h4>BCS Model Test</h4>
+            <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam placerat tortor commodo lectus laoreet venenatis.</p>
+          </div>
+          <div className='gal-1-img'><img className='gal-1-img1' src={bscmodeltest} alt="some pic"></img></div>
+        </div>
+        <div className="gal-2"><img className='gal-1-img2' src={primaryexam} alt="some pic"></img><p>Primary Exam</p></div>
     </div>
+    <div className="gal-2-1">
+    <div className='gal-3'><img className='gal-1-img3' src={bankexam} alt="some pic"></img><p>Bank Exam</p></div>
+    <div className='gal-4'><img className='gal-1-img4' src={nsiexam} alt="some pic"></img><p>NSI Exam</p></div>
+    <div className='gal-5'><img className='gal-1-img5' src={railwayexam} alt="some pic"></img><p>Railway Exam</p></div>
+      </div>
  </div>
 </div>
 </div>
-</Parallax>
+
         </div>
     )
 }
