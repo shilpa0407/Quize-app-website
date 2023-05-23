@@ -1,5 +1,5 @@
 
-import React, {useEffect } from 'react';
+import React, { useEffect } from 'react';
 import "../components/Landing.css"
 import quizbaj from "../Images/quizbaj.png"
 import landingpic from "../Images/landingpic 01.png"
@@ -15,118 +15,164 @@ import primaryexam from "../Images/primaryexam.png";
 import bankexam from "../Images/bankexam.png"
 import nsiexam from "../Images/nsiexam.png"
 import railwayexam from "../Images/railwayexam.png"
+import math from "../Images/math.png"
+import english from "../Images/english.png"
+import science from "../Images/science.png"
+import Kannada from "../Images/Kannada.png"
+import gk from "../Images/gk.png"
 
 
-function Landing(){
-    const [springProps, setSpringProps] = useSpring(() => ({
-        xy: [0, 0],
-        config: { mass: 10, tension: 1200, friction: 40 },
-      }));
-    
-      const handleMouseMove = (e) => {
-        const { clientX, clientY } = e;
-        setSpringProps({ xy: [clientX, clientY] });
-      };
-    
-      useEffect(() => {
-        const handleMouseMove = (e) => {
-          const { clientX, clientY } = e;
-          setSpringProps({ xy: [clientX, clientY] });
-        };
-    
-        window.addEventListener('mousemove', handleMouseMove);
-        return () => {
-          window.removeEventListener('mousemove', handleMouseMove);
-        };
-      }, [setSpringProps]);
-    return(
-  
-        <div>
-            
-        <animated.div className="cursor" style={{
-            transform: springProps.xy.interpolate((x, y) => `translate3d(${x - 10}px, ${y - 10}px, 0)`),
-          }}> </animated.div>
-       {/*navigationbar */}
+function Landing() {
+  const [springProps, setSpringProps] = useSpring(() => ({
+    xy: [0, 0],
+    config: { mass: 10, tension: 1200, friction: 40 },
+  }));
 
-           <div className="navigation">
-            <div className="logo"><img src={quizbaj} alt="logo"></img></div>
-            <div className="menus">
-                <div>About</div>
-                <div>Portfolio</div>
-                <div>Services</div>
-                <div>Blog</div>
+  const handleMouseMove = (e) => {
+    const { clientX, clientY } = e;
+    setSpringProps({ xy: [clientX, clientY] });
+  };
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      const { clientX, clientY } = e;
+      setSpringProps({ xy: [clientX, clientY] });
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, [setSpringProps]);
+  return (
+
+    <div>
+
+      <animated.div className="cursor" style={{
+        transform: springProps.xy.interpolate((x, y) => `translate3d(${x - 10}px, ${y - 10}px, 0)`),
+      }}> </animated.div>
+      {/*navigationbar */}
+
+      <div className="navigation">
+        <div className="logo"><img src={quizbaj} alt="logo"></img></div>
+        <div className="menus">
+          <div>About</div>
+          <div>Portfolio</div>
+          <div>Services</div>
+          <div>Blog</div>
+        </div>
+        <div className="contact"><button>contact</button></div>
+      </div>
+
+      {/* landing page main text and images */}
+      <div className="main-text-img">
+
+        <div className="main-text">
+          <div className="text1-bold">Play Online Quiz & Win Cash Daily!</div>
+          <div className="sm-text">Win up to 10,000 Rs monthly from QuizBaj.</div>
+
+          <div className="login-rig">
+            <div className="input">
+              <span>+91</span>
+              <input type="text" />
             </div>
-            <div className="contact"><button>contact</button></div>
-           </div>
 
-{/* landing page main text and images */}
-  <div className="main-text-img">
-
-    <div className="main-text">
-    <div className="text1-bold">Play Online Quiz & Win Cash Daily!</div>
-    <div className="sm-text">Win up to 10,000 Rs monthly from QuizBaj.</div>
-
-    <div className="login-rig">
-    <div className="input">       
-        <span>+91</span>
-        <input type="text" />
-      </div>
-
-          <div className="reg-btn"><button>register now</button></div>
-    </div>
-    <div className="sm-text-2">Number of Active Users Right Now</div>
-    <div className="sm-text-3">20,000+</div>
-    </div> 
-    <div className="img-div"><img className="small-img" src={landingpic} alt="pic"></img></div>
-    </div>
-    
-{/* 2nd page how to play starts from here */}
-
-<div className="section-2">
-    <div className="sec-2-text">How to play</div>
-    <div className="cards-line-01">
-        <div className="card-1"><img src={card1} alt = "card-1 img"></img></div>
-        <div className="card-2"><img src={card2} alt = "card-1 img"></img></div>
-        <div className="card-3"><img src={card3} alt = "card-1 img"></img></div>
-    </div>
-  
-</div>
-<div className="section-3">
-    <div className="cards-line-02">
-        <div className="card-4"><img src={card4} alt= "card-1 img"></img></div>
-        <div className="card-5"><img src={card5} alt= "card-1 img"></img></div>
-        <div className="card-6"><img src={card6} alt= "card-1 img"></img></div>
-    </div>
-</div>
- 
-<div className="section-4">
-    <div className="text-and-btn">
-       <div className="text-sec4"><p>lets sharp your <br></br>preparation</p></div>
-       <div className="btn-sec4"> <button>explore all</button></div>
-    </div>
-    <div className='water'>
- <div className="section-5">
-    <div className="gallary-1">
-        <div className="gal-1">
-          <div className='gal-1-text'>
-            <h4>BCS Model Test</h4>
-            <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam placerat tortor commodo lectus laoreet venenatis.</p>
+            <div className="reg-btn"><button>register now</button></div>
           </div>
-          <div className='gal-1-img'><img className='gal-1-img1' src={bscmodeltest} alt="some pic"></img></div>
+          <div className="sm-text-2">Number of Active Users Right Now</div>
+          <div className="sm-text-3">20,000+</div>
         </div>
-        <div className="gal-2"><img className='gal-1-img2' src={primaryexam} alt="some pic"></img><p>Primary Exam</p></div>
-    </div>
-    <div className="gal-2-1">
-    <div className='gal-3'><img className='gal-1-img3' src={bankexam} alt="some pic"></img><p>Bank Exam</p></div>
-    <div className='gal-4'><img className='gal-1-img4' src={nsiexam} alt="some pic"></img><p>NSI Exam</p></div>
-    <div className='gal-5'><img className='gal-1-img5' src={railwayexam} alt="some pic"></img><p>Railway Exam</p></div>
+        <div className="img-div"><img className="small-img" src={landingpic} alt="pic"></img></div>
       </div>
- </div>
-</div>
-</div>
 
+      {/* 2nd page how to play starts from here */}
+
+      <div className="section-2">
+        <div className="sec-2-text">How to play</div>
+        <div className="cards-line-01">
+          <div className="card-1"><img src={card1} alt="card-1 img"></img></div>
+          <div className="card-2"><img src={card2} alt="card-1 img"></img></div>
+          <div className="card-3"><img src={card3} alt="card-1 img"></img></div>
         </div>
-    )
+
+      </div>
+      <div className="section-3">
+        <div className="cards-line-02">
+          <div className="card-4"><img src={card4} alt="card-1 img"></img></div>
+          <div className="card-5"><img src={card5} alt="card-1 img"></img></div>
+          <div className="card-6"><img src={card6} alt="card-1 img"></img></div>
+        </div>
+      </div>
+
+      <div className="section-4">
+        <div className="text-and-btn">
+          <div className="text-sec4"><p>lets sharp your <br></br>preparation</p></div>
+          <div className="btn-sec4"> <button>explore all</button></div>
+        </div>
+      </div>
+      <div className='water'>
+        <div className="section-5">
+          <div className="gallary-1">
+            <div className="gal-1">
+              <div className='gal-1-text'>
+                <h4>BCS Model Test</h4>
+                <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam placerat tortor commodo lectus laoreet venenatis.</p>
+              </div>
+              <div className='gal-1-img'><img className='gal-1-img1' src={bscmodeltest} alt="some pic"></img></div>
+            </div>
+            <div className="gal-2"><img className='gal-1-img2' src={primaryexam} alt="some pic"></img><p>Primary Exam</p></div>
+          </div>
+          <div className="gal-2-1">
+            <div className='gal-3'><img className='gal-1-img3' src={bankexam} alt="some pic"></img><p>Bank Exam</p></div>
+            <div className='gal-4'><img className='gal-1-img4' src={nsiexam} alt="some pic"></img><p>NSI Exam</p></div>
+            <div className='gal-5'><img className='gal-1-img5' src={railwayexam} alt="some pic"></img><p>Railway Exam</p></div>
+          </div>
+        </div>
+        <div className="section-6">
+          <div className="text-and-btn-2">
+            <div className="text-sec6"><p>Explore Our Quiz  <br></br>Categories</p></div>
+            <div className="btn-sec6"> <button>explore all</button></div>
+          </div>
+        </div>
+      </div>
+
+      <div className='section-7'>
+        <div id='boxes'>
+          <div className='box1'>
+            <img src={math}className='box1-img' alt='box1'></img>
+            <h6>Math</h6>
+            <p>Sky was cloudless and of a deep dark blue spectacle <br></br> before us was indeed </p>
+          </div>
+
+          <div className='box2'>
+            <img src={english} className='box2-img' alt='box2'></img>
+            <h6>English</h6>
+            <p>Even the all-powerful Pointing has no <br></br> control about the blind texts.</p>
+          </div>
+
+          <div className='box3'>
+            <img src={science} className='box3-img' alt='box3'></img>
+            <h6>Science</h6>
+            <p>Unorthographic life One <br></br> day however a small line of <br></br> blind text.</p>
+          </div>
+
+          <div className='box4'>
+            <img src={Kannada} className='box4-img' alt='box4'></img>
+            <h6>Kanadda</h6>
+            <p>However a small line of blind <br></br>text by the name..</p>
+          </div>
+
+          <div className='box5'>
+            <img src={gk} className='box5-img' alt='box5'></img>
+            <h6>General Knowledge</h6>
+            <p>Text by the name of Lorem Ipsum <br></br> decided to leave for the far World<br></br> of Grammar.</p>
+          </div>
+        </div>
+      </div>
+      <div>
+      </div>
+    </div>
+  )
 }
 
 export default Landing;
