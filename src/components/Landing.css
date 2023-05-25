@@ -5,7 +5,9 @@
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background: linear-gradient(to bottom right, #ff9900c4, #ff5500a4);
+    background-color: #E8C5B0;
+    background: linear-gradient(142.6deg, rgba(29, 70, 69, 0.8) 10.41%, rgba(232, 198, 176, 0.8) 96.47%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     pointer-events: none;
     z-index: 9999;
 }
@@ -37,12 +39,9 @@
     flex: 1;
 }
 
-
-
 .contact {
     flex: 1;
     text-align: center;
-
 }
 
 .contact button {
@@ -56,17 +55,6 @@
 
 .main-text-img {
     display: flex;
-    animation: fade-out 2s ease-in forwards;
-}
-
-@keyframes fade-out {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
 }
 
 .main-text {
@@ -459,8 +447,6 @@
     &:hover {
         transform: scale(0.9);
     }
-
-
 }
 
 .gal-1-text {
@@ -496,7 +482,7 @@
     transition: transform 700ms ease;
 
     &:hover {
-        transform: scale(0.9);
+        transform: scale(1.1);
     }
 }
 
@@ -633,7 +619,7 @@
 
 }
 
-/* section5 */
+/* section6 */
 .section-6 {
     margin-top: 55px;
 }
@@ -708,9 +694,6 @@
     margin: 15px;
     padding-left: 55px;
 }
-.box1:hover{
-    background-color: #1D4645;
-}
 
 .box2 {
     background: #FFF2E6;
@@ -774,4 +757,98 @@ font-weight: 400;
 font-size: 16px;
 line-height: 20px;
 color: rgba(51, 51, 51, 0.5);
+}
+
+.section-8 {
+    margin-top: 55px;
+    background-color: #1D4645;
+    display: flex;
+    padding-left: 150px;
+    padding-right: 150px;
+    color: #F2F2F2;
+}
+.sec-8-text{
+ flex: 30%;
+}
+.sec-8-text h4{
+    font-family: 'Commissioner';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 45px;
+    color: #FFFFFF;
+    padding-top: 80px;
+}
+
+.sec-8-text p{
+font-family: 'Rubik';
+font-style: normal;
+font-size: 16px;
+line-height: 22px;
+padding-top: 20px;
+text-align: justify;
+}
+
+.sec-8-img .sec-8-img1{
+   margin-top: 50px;
+width: 600px;
+height: 500px;
+flex: 70%;
+
+}
+
+.section-9 {
+    background-color: #1D4645;
+    padding-left: 150px;
+    color: #F2F2F2;
+    padding-bottom: 100px;
+}
+.sec-9-text h4{
+    font-family: 'Commissioner';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 45px;
+    color: #FFFFFF;
+    padding-top: 80px;
+}
+
+.sec-9-images{
+    padding-top: 15px;
+    display: flex;
+}
+.sec-9-img{ 
+     padding-right: 45px;
+}
+.sec-9-img1{
+    width: 300px;
+    height: 200px; 
+}
+.sec-9-img2{
+    width: 300px;
+    height: 200px; 
+}
+
+.sec-9-img3{
+    width: 300px;
+    height: 200px; 
+}
+
+.sec-9-img p{
+   font-family: 'Commissioner';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.footer{
+    display: flex;
+    margin-left: 550px;
+    margin-right: 500px;
+    margin-top: 15px;
+}
+
+.footer img{
+    padding-right: 5px;
 }
